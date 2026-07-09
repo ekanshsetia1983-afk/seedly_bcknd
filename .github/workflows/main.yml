@@ -22,10 +22,10 @@ jobs:
           password: ${{ secrets.PASSWORD }}
 
           script: |
-          cd /home/palak/seedly_bcknd
-          git pull origin main
-          sudo npm i
-          sudo npm run build
-          pm2 delete "Seedly backend"
-          pm2 start npm --name "Seedly backend" -- run dev || pm2 restart "Seedly backend"
+           cd /home/palak/seedly_bcknd
+           git pull origin main
+           sudo npm i
+           sudo npm run build
+           pm2 delete "Seedly backend"
+           pm2 start npm --name "Seedly backend" -- run dev || pm2 restart "Seedly backend"
             
